@@ -1,0 +1,72 @@
+{
+  "welcome_title": "Axysへ",
+  "welcome_title_small": "ネオシンカーズ",
+  "get_started": "開始する",
+  "login": "ログイン",
+
+  "languages": "言語",
+  "search_placeholder": "検索",
+
+  "language_english": "英語",
+  "language_japanese": "日本語",
+  "language_urdu": "ウルドゥー語",
+  "language_arabic": "アラビア語",
+  "language_french": "フランス語",
+  "language_spanish": "スペイン語",
+
+  "close": "閉じる",
+  
+  "create_account_title": "Axyxアカウントを作成",
+  "create_account_subtext": "あなたの財務の自由の未来。もはや数字や小数点の問題ではなく、発見の問題です",
+  "email_placeholder": "メールアドレス",
+  "terms_agree_text": "アカウントを作成することで、以下に同意したことになります：",
+  "terms_link": "利用規約",
+  "next": "次へ",
+  "terms_modal_title": "サービス利用規約",
+  "terms_modal_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem…\n\n（スクロールできるようにテキストを十分長くしてください）",
+  "agree": "同意する",
+
+  
+  "otp_screen_title": "メールを確認する",
+  "otp_screen_subtitle": "メールに6桁の認証コードを送信しました。このコードは60秒で失効します。",
+  "otp_screen_verifying": "コードを確認中...",
+  "otp_screen_next_btn": "個人情報を取得",
+  
+  "phone_screen_title": "あなたの電話番号は何ですか？",
+  "phone_screen_placeholder": "1234567890",
+  "phone_screen_button": "電話番号を確認する",
+  
+  "get_to_know_title": "自己紹介をしましょう",
+  "first_name_label": "名",
+  "middle_name_label": "ミドルネーム（任意）",
+  "last_name_label": "姓",
+  "nationality_label": "国籍",
+  "select_nationality": "国籍を選択",
+ 
+  "select_nationality_modal_title": "国籍を選択",
+  "pep_question": "この分野での職務経験はありますか？",
+  "yes_option": "はい",
+  "no_option": "いいえ",
+  
+  "address_title": "あなたの居住地はどこですか？",
+  "street_label": "通りの住所または建物",
+  "city_label": "村/町/市",
+  "state_label": "州/地域/県",
+  "country_label": "国",
+  "select_country": "国を選択",
+  "next_button": "次へ",
+  "select_nationality_title": "国籍を選択",
+  "close_button": "閉じる"
+
+
+ 
+}
+
+
+
+
+
+ 
+
+
+

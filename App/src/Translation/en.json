@@ -1,0 +1,75 @@
+{
+  "welcome_title": "Axys to",
+  "welcome_title_small": "Neo Thinkers",
+  "get_started": "Get Started",
+  "login": "Log in",
+
+  "languages": "Languages",
+  "search_placeholder": "Search",
+
+  "language_english": "English",
+  "language_japanese": "Japanese",
+  "language_urdu": "Urdu",
+  "language_arabic": "Arabic",
+  "language_french": "French",
+  "language_spanish": "Spanish",
+
+  "close": "Close",
+  
+  "create_account_title": "Create Axyx account",
+  "create_account_subtext": "The future of your financial freedom. It's no longer about digits and decimals—it's about discovery",
+  "email_placeholder": "Email",
+  "terms_agree_text": "By creating an account you agree to our ",
+  "terms_link": "Terms & Conditions",
+  "next": "Next",
+  "terms_modal_title": "Terms of Services",
+  "terms_modal_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem…\n",
+  "agree": "Agree",
+
+  "otp_screen_title": "Verify your email",
+  "otp_screen_subtitle": "We've sent a 6-digit verification code to your email. The code expires in 60 seconds.",
+  "otp_screen_verifying": "Verifying code...",
+  "otp_screen_next_btn": "Get Personal information",
+
+
+
+  
+  "phone_screen_title": "What's your phone number?",
+  "phone_screen_placeholder": "1234567890",
+  "phone_screen_button": "Verify Phone Number",
+
+  
+  "get_to_know_title": "Let's get to know you",
+  "first_name_label": "First Name",
+  "middle_name_label": "Middle Name (Optional)",
+  "last_name_label": "Last Name",
+  "nationality_label": "Nationality",
+  "select_nationality": "Select nationality",
+  
+  "select_nationality_modal_title": "Select Nationality",
+   "pep_question": "Do you have prior work experience in the field?",
+  "yes_option": "Yes",
+  "no_option": "No",
+  
+  "address_title": "What is your residential address?",
+  "street_label": "Street address or building",
+  "city_label": "Village/town/City",
+  "state_label": "State/region and province",
+  "country_label": "Country",
+  "select_country": "Select country",
+  "next_button": "Next",
+  "select_nationality_title": "Select Nationality",
+  "close_button": "Close"
+
+
+  
+}
+
+
+
+
+
+ 
+
+
+
