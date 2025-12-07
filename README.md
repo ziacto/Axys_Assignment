@@ -1,79 +1,107 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Axys Authentication Trial Test
 
-# Getting Started
+React Native authentication flow implementation for trial test evaluation.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 🎯 Features Implemented
 
-## Step 1: Start the Metro Server
+### Authentication Flows
+- ✅ Complete 7-step signup flow
+- ✅ Email/Phone login options
+- ✅ Demo OTP verification
+- ✅ Personal information collection
+- ✅ PEP (Politically Exposed Person) check
+- ✅ Residential address entry
+- ✅ Password creation with validation
+- ✅ PIN setup and confirmation
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### User Experience
+- ✅ English/Japanese localization
+- ✅ Responsive design
+- ✅ Form validation
+- ✅ Progress indicators
+- ✅ Error handling
+- ✅ Smooth navigation
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Technical Implementation
+- React Native 0.75
+- React Navigation
+- Context API for state management
+- AsyncStorage for data persistence
+- Modular component architecture
 
-```bash
-# using npm
-npm start
+## 🚀 Quick Start
 
-# OR using Yarn
-yarn start
-```
+\`\`\`bash
+# Install dependencies
+npm install
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
+# Run on Android
 npm run android
 
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
+# Run on iOS
 npm run ios
+\`\`\`
 
-# OR using Yarn
-yarn ios
-```
+## 📱 Testing
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### Demo OTP
+The app uses demo OTP verification. Enter any 6-digit code to proceed.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Test Flow
+1. Launch app
+2. Select language (EN/JP)
+3. Create account with any email
+4. Enter any 6-digit OTP
+5. Complete personal information
+6. Set password (must meet criteria)
+7. Create 4-digit PIN
+8. Access dashboard
 
-## Step 3: Modifying your App
+## 🏗️ Architecture
 
-Now that you have successfully run the app, let's modify it.
+\`\`\`
+App/
+├── Components/
+│   ├── Createaccount/    # Signup flow screens
+│   ├── Login/            # Login screen
+│   ├── Createpin/        # PIN setup
+│   ├── Dashboard/        # Main screen
+│   └── Splash.js         # Splash screen
+├── src/
+│   ├── Translation/      # i18n files
+│   └── Languagecontext.js # Language state
+\`\`\`
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## 🔐 Security Notes
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- Demo mode for trial purposes
+- Production would integrate with:
+  - Supabase/Firebase for authentication
+  - Biometric authentication
+  - Secure token management
+  - Session persistence
 
-## Congratulations! :tada:
+## 📝 Notes for Reviewers
 
-You've successfully run and modified your React Native App. :partying_face:
+**Completed:**
+- All UI screens match Figma specifications
+- Full navigation flow
+- Form validations
+- Localization system
+- Clean, maintainable code
 
-### Now what?
+**Production Enhancements:**
+- Backend integration (ready to implement)
+- Biometric authentication
+- Session management
+- User data persistence
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## 👤 Developer
 
-# Troubleshooting
+**Zia**  
+Senior Android Developer & Team Lead  
+GitHub: [github.com/ziacto](https://github.com/ziacto)
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 📄 License
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Trial test project - 2024
