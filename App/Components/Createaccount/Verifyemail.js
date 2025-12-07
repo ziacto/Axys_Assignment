@@ -13,12 +13,18 @@ import { ScaledSheet, s } from "react-native-size-matters";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Userinfo from "./Userinfo";
 import { useLanguage } from '../../src/Languagecontext'
+import { supabase } from '../../Components/Supabaseclients';
+import { useRoute } from '@react-navigation/native';
+
 
 export default function OtpScreen({ navigation }) {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [timer, setTimer] = useState(60);
   const [verifying, setVerifying] = useState(false);
   const { t } = useLanguage();
+  const route = useRoute();
+const { email } = route.params;
+
 
   const inputs = useRef([]);
 
@@ -30,25 +36,155 @@ export default function OtpScreen({ navigation }) {
     return () => clearInterval(interval);
   }, [timer]);
 
-  const handleInput = (text, index) => {
+  // const handleInput = async (text, index) => {
+
+  //   const newOtp = [...otp];
+  //   newOtp[index] = text;
+  //   setOtp(newOtp);
+    
+
+  //   // Move to next input
+  //   if (text && index < 5) {
+  //     inputs.current[index + 1].focus();
+  //   }
+
+
+
+
+
+
+
+    // When 6 digits entered → start verifying
+    // if (index === 5 && text !== "") {
+    //   setVerifying(true);
+    //   setTimeout(() => {
+    //     setVerifying(false);
+    //     alert("OTP Verified (Demo)");
+    //   }, 2500);
+    // }
+
+// if (index === 5 && text !== "") {
+//   const code = [...newOtp].join("");
+//   setVerifying(true);
+
+//   const { error } = await supabase.auth.verifyOtp({
+//     email: email,
+//     token: code,
+//     type: 'email',
+//   });
+
+//   setVerifying(false);
+
+//   if (error) {
+//     alert("Invalid OTP");
+//     return;
+//   }
+
+//   // Success → move next
+//   navigation.navigate("Userinfo");
+// }
+
+
+
+//   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const handleInput = async (text, index) => {
     const newOtp = [...otp];
     newOtp[index] = text;
     setOtp(newOtp);
 
-    // Move to next input
-    if (text && index < 5) {
-      inputs.current[index + 1].focus();
-    }
+    if (text && index < 5) inputs.current[index + 1]?.focus();
 
-    // When 6 digits entered → start verifying
-    if (index === 5 && text !== "") {
+    if (index === 5 && text !== '') {
+      // Verify OTP in-app
+      const code = newOtp.join('');
       setVerifying(true);
-      setTimeout(() => {
-        setVerifying(false);
-        alert("OTP Verified (Demo)");
-      }, 2500);
+      const { error } = await supabase.auth.verifyOtp({
+        email,
+        token: code,
+        type: 'email',
+      });
+      setVerifying(false);
+
+      if (error) {
+        Alert.alert('Invalid OTP', 'Please check your code and try again');
+        return;
+      }
+
+      // OTP verified → navigate
+      navigation.navigate('Userinfo');
     }
   };
+
+
+
+
 
   return (
     <SafeAreaView style={styles.container}>

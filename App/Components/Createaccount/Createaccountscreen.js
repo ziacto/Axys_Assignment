@@ -9,11 +9,16 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  Alert
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { ScaledSheet } from 'react-native-size-matters';
 import { useLanguage } from '../../src/Languagecontext'
+
+import { supabase } from '../../Components/Supabaseclients';
+
+
 
 
 const emailIsValid = (email) => /\S+@\S+\.\S+/.test(email);
@@ -59,10 +64,120 @@ const CreateAccountScreen = ({ navigation }) => {
     if (bottomReached) setCanAgree(true);
   };
 
-  const onNext = () => {
-    // console.log('Next pressed:', email, agreed);
-    navigation.navigate("Verifyemail",{ email: email })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const onNext = () => {
+  //   // console.log('Next pressed:', email, agreed);
+  //   navigation.navigate("Verifyemail",{ email: email })
+  // };
+// const onNext = async () => {
+//   if (!emailIsValid(email) || !agreed) return;
+
+//   try {
+//     const { error } = await supabase.auth.signInWithOtp({
+//       email,
+//       options: {
+//         shouldCreateUser: true,
+//       },
+//     });
+
+//     if (error) {
+//       alert(error.message);
+//       return;
+//     }
+
+//     // Navigate to OTP screen with email
+//     navigation.navigate("Verifyemail", { email });
+
+//   } catch (e) {
+//     alert("Error sending OTP");
+//   }
+// };
+
+// 33333333333333333333333333333333333333
+
+// const onNext = async () => {
+//   if (!emailIsValid(email) || !agreed) return;
+
+//   try {
+//     const { error } = await supabase.auth.signInWithOtp({
+//       email,
+//       options: {
+//         shouldCreateUser: true,
+//          redirectTo: 'https://example.com/dummy', // can be any valid URL
+//       },
+//     });
+
+//     if (error) {
+//       alert(error.message);
+//       return;
+//     }
+
+//     navigation.navigate("Verifyemail", { email });
+
+//   } catch (e) {
+//     alert("Error sending OTP");
+//   }
+// };
+//44444444444444444444444444444444444444444444
+const onNext = async () => {
+    if (!emailIsValid(email) || !agreed) return;
+
+    try {
+      // Send OTP directly, no redirectTo needed
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: { shouldCreateUser: true } // no redirectTo
+      });
+
+      if (error) {
+        Alert.alert('Error', error.message);
+        return;
+      }
+
+      navigation.navigate("Verifyemail", { email });
+    } catch (e) {
+      Alert.alert('Error', 'Failed to send OTP');
+    }
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <KeyboardAvoidingView
@@ -336,4 +451,3 @@ const styles = ScaledSheet.create({
     fontSize: '13@ms',
   },
 });
-

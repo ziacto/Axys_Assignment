@@ -31,10 +31,10 @@ export default function App() {
     <LanguageProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Splash">
-          {/* <Stack.Screen name="Splash" component={Splash}  options={{ headerShown: false }} /> */}
+          <Stack.Screen name="Splash" component={Splash}  options={{ headerShown: false }} />
           <Stack.Screen name="Initialscreen" component={Initialscreen} options={{ headerShown: false }} />
            <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-          {/* <Stack.Screen name="Createaccountscreen" component={Createaccountscreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Createaccountscreen" component={Createaccountscreen} options={{ headerShown: false }} />
           <Stack.Screen name="Verifyemail" component={Verifyemail} options={{ headerShown: false }} />
         <Stack.Screen name="Userinfo" component={Userinfo} options={{ headerShown: false }} /> 
         <Stack.Screen name="Namefields" component={Namefields} options={{ headerShown: false }} />
@@ -44,7 +44,7 @@ export default function App() {
          <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }} />
           <Stack.Screen name="Createpin" component={Createpin} options={{ headerShown: false }} />
           <Stack.Screen name="Confirmpin" component={Confirmpin} options={{ headerShown: false }} />
-          <Stack.Screen name="PinSuccess" component={PinSuccess} options={{ headerShown: false }} /> */}
+          <Stack.Screen name="PinSuccess" component={PinSuccess} options={{ headerShown: false }} />
 
       </Stack.Navigator>
     </NavigationContainer>
